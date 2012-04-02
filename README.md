@@ -3,15 +3,9 @@ __Notification__ is a script for [Appcelerator Titanium Mobile](http://www.appce
 ![Using an image](http://f.cl.ly/items/2b3O3W353m0k1q1v1O1T/Capture%20d%E2%80%99%C3%A9cran%20du%20Simulateur%20iOS%202%20avr.%202012%2008.37.22.png) ![A spinner with a label](http://f.cl.ly/items/2y3d1i3U110H403H0T2w/Capture%20d%E2%80%99%C3%A9cran%20du%20Simulateur%20iOS%202%20avr.%202012%2008.38.34.png)
 
 ## Usage
-Include Notification.js in your document
-```javascript
-Ti.include('path/to/Notification.js');
-```
+Include Notification.js in your document: `Ti.include('path/to/Notification.js');`
 
-To use Notification just call this method
-```javascript
-Notification.show(...);
-```
+To use Notification just call the method: `Notification.show(...);`
 
 __Notification.show(...)__ needs a parameters dictionary with the following values.  
 __parent__: The container where the notification will be shown  
@@ -36,17 +30,9 @@ Notification.show({
 
 ## Other methods
 __Notification.hide(...)__  removes a notification from the screen.  
-```javascript
-Notification.hide({
-  parent: win
-});
-```  
-__Notification.setLabel('Some text')__ changes the label of a notification.  
-__Notification.setDefaults(...)__ sets default values to be used for all notifications. They are saved in NSDefaults, and can be overrided when specifying other values in __Notification.show(...)__. You can reset the configuration by calling this method without any parameter.
-```javascript
-Notification.setDefaults({
-  size: 150,
-  label: L('Please wait...'),
-  spinner: true
-});
-```
+`Notification.hide({ parent: win });`
+
+__Notification.setLabel('Some text')__ changes the label of a notification.
+
+__Notification.setDefaults(...)__ sets default values to be used for all notifications. They are saved in NSDefaults, and can be overrided when specifying other values in __Notification.show(...)__. You can reset the configuration by calling this method without any parameter.  
+`Notification.setDefaults({ size: 150, label: L('Please wait...'), spinner: true });`
